@@ -1,6 +1,61 @@
-<head></head>
-<body>
-    <h1>stay tuned ...</h1>
+<html>
+    <head>
+    <title>Quantum AI Blockchain</title>
+    <script src="js/tfjs@0.8.0.js"> </script>
+    <script src="js/threejs/three.min.js"> </script>
+    <script src="js/threejs/OrbitControls.js"> </script>
+    <script src="js/threejs/stats.min.js"> </script>
+    <script src="js/threejs/Detector.js"> </script>
+    <script src="js/three-d.js"> </script>
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+
+    <script src="js/model.js"> </script>
+    <style type="text/css">
+        canvas {
+            border:          solid 1px black;
+            height:          0px;
+            width:           0px;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: -webkit-crisp-edges;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+        }
+
+        body {
+            background-color: black;
+            margin:           0px;
+            overflow:         hidden;
+            text-align:       center;
+            font-weight:      bold;
+            text-align:       center;
+            font-family:      'Cutive Mono';
+        }
+
+        #top { background: #eaeaea;
+            padding: 5px;
+        }
+
+        a { color: black; background: gold; }
+        a:hover { background: magenta; }
+        h1 { text-decoration: underline; }
+        h1, h2 { 
+            font-weight: bold;
+        }
+
+        h1 { font-size: 2em; }
+        h2 { font-size: 1.2em; }
+        p.bold { background: white; padding: 2px; width: 600px;  text-align:
+            justify; padding: 5px; }
+
+        p.bold b {
+            background: gold;
+        }
+    </style>
+  </head>
+  <body>
+      <div id="top">
+          <h1><a href="https://quantumaiblockchain.com">Quantum AI
+                  Blockchain</a></h1>
     <h2>News</h2>
     <p>
     10-Apr-2018 <a href="https://arxiv.org/abs/1804.03719">Quantum Algorithm Implementations for Beginners
@@ -24,4 +79,27 @@
     <p>
     8-Sep-2017 <a href="https://arxiv.org/abs/1709.02779">Machine learning & artificial intelligence in the quantum domain - Vedran Dunjko, Hans J. Briegel</a>
     </p>
+    <h2>Board of Directors</h2>
+    <p> Noon van der Silk, Lyndon Maydwell, Sean Seefried, Fabion Kauker and
+        Susie Sheldrick
+    </p>
+    <h2>Investors/Contact</h2>
+    <center>
+    <p class="bold">We're only interested in investment from the wholesale
+    quantum investment, bitcoin or AI communities; all of whom can get in
+    contact with us directly by standard means. If you're outside of these
+    communities, we belive you will be able to get the details of one of us;
+    or contact details are not listed directly due to <b>overwhelming
+    interest</b>.
+    </p>
+    </center>
+
+      </div>
+      <canvas height="80" width="80" id="cppn-canvas" />
+
+      <script>
+        animateCppn("cppn-canvas");
+      </script>
+    <h1>stay tuned ...</h1>
 </body>
+</html>

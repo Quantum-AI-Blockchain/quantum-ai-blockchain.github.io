@@ -1,0 +1,127 @@
+/*
+ * Main Animation Thing:
+ *
+ * - https://codepen.io/pierreburel/pen/VyvQRr
+ */
+body {
+  background: #2e225c linear-gradient(to bottom, #0c0917, #2e225c 50%);
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  position: relative;
+}
+body::before, body::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+body::before {
+  -webkit-animation: grid 1s linear infinite;
+          animation: grid 1s linear infinite;
+  background-color: #2e225c;
+  background-image: linear-gradient(to bottom, rgba(46, 34, 92, 0) 75%, #2e225c 95%), linear-gradient(180deg, transparent 0, rgba(44, 220, 235, 0.75) 0, rgba(44, 220, 235, 0.75) 1px, transparent 0), linear-gradient(90deg, transparent 0, rgba(44, 220, 235, 0.75) 0, rgba(44, 220, 235, 0.75) 1px, transparent 0), linear-gradient(to bottom, rgba(241, 62, 84, 0.5), rgba(241, 62, 84, 0) 75%);
+  background-size: 100%, 20px 20px, 20px 20px, 100%;
+  box-shadow: 0 -80px 80px #f13e54;
+  margin: 0 -100px;
+  top: 80%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: rotate3d(1, 0, 0, 60deg);
+          transform: rotate3d(1, 0, 0, 60deg);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  z-index: -1;
+}
+
+@-webkit-keyframes grid {
+  from {
+    -webkit-transform: translate3d(20px, 0, 0) rotate3d(1, 0, 0, 60deg);
+            transform: translate3d(20px, 0, 0) rotate3d(1, 0, 0, 60deg);
+  }
+}
+
+@keyframes grid {
+  from {
+    -webkit-transform: translate3d(20px, 0, 0) rotate3d(1, 0, 0, 60deg);
+            transform: translate3d(20px, 0, 0) rotate3d(1, 0, 0, 60deg);
+  }
+}
+
+
+/*
+ * Normal Stuffs
+ */
+@font-face {
+    font-family: 'BaddTimes';
+    src: url('/fonts/badd-times/BaddTimes-Display.eot');
+    src: url('/fonts/badd-times/BaddTimes-Display.otf') format('opentype'),
+         url('/fonts/badd-times/BaddTimes-Display.woff') format('woff'),
+         url('/fonts/badd-times/BaddTimes-Display.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 a {
+  color:       sandybrown;
+}
+
+h1 a:hover {
+  color: lightcoral;
+}
+
+h1 {
+  font-family: "BaddTimes";
+  font-size:   2em;
+  padding:     0;
+  margin:      0;
+  border-bottom: solid 2px sandybrown;
+}
+
+h2 {
+  font-family: "BaddTimes";
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+p.bold {
+  background: #eaeaea33;
+  padding: 10px;
+}
+
+a:hover {
+  color: sandybrown;
+}
+
+p {
+  color: white;
+  font-family: "Nova Mono";
+}
+
+h1 span {
+  font-size: 1.3em;
+}
+
+#c {
+  margin:          30px;
+  display:         flex;
+  justify-content: center;
+  flex-direction:  column;
+}
+
+div.blocks {
+  display:         flex;
+  flex-direction:  row;
+  justify-content: center;
+}
+
+div.block {
+  margin:   20px;
+  max-width: 500px;
+}
+

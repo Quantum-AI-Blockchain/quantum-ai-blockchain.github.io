@@ -1,177 +1,109 @@
 <html>
-    <head>
-    <title>Quantum AI Blockchain</title>
-    <script src="js/tfjs@0.8.0.js"> </script>
-    <script src="js/threejs/three.min.js"> </script>
-    <script src="js/threejs/OrbitControls.js"> </script>
-    <script src="js/threejs/stats.min.js"> </script>
-    <script src="js/threejs/Detector.js"> </script>
-    <script src="js/three-d.js"> </script>
-    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
-    <link href="static/css/main.aa287d50.css" rel="stylesheet" type="text/css" />
-    <style type="text/css" media="all">
-      #root {
-        background: #eee;
-      }
-      #root ul {
-        height: 60% !important;
-      }
-    </style>
-    <script src="js/model.js"> </script>
-    <style type="text/css">
-        canvas {
-            border:          solid 1px black;
-            height:          0px;
-            width:           0px;
-            image-rendering: -moz-crisp-edges;
-            image-rendering: -webkit-crisp-edges;
-            image-rendering: pixelated;
-            image-rendering: crisp-edges;
-        }
+<head>
+<title>Quantum AI Blockchain</title>
+<link href="static/css/main.aa287d50.css" rel="stylesheet" type="text/css" />
+<link href="static/css/default.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Nova+Mono&display=swap" rel="stylesheet">
+<style type="text/css" media="all">
+#root {
+  background: #eee;
+  bottom: 20;
+}
+#root ul {
+  height: 60% !important;
+}
+</style>
+</head>
+<body>
+  <section id="c">
+    <h1> 
+      <a href="/"><span>Q</span>uantum <span>AI</span> <span>B</span>lockchain
+      </a> </h1>
+    <div class="blocks">
+      <div class="block">
+        <h2>News</h2>
+        <!-- <p>24-Oct-2018</p> -->
 
-        body {
-            background-color: black;
-            margin:           0px;
-            overflow:         hidden;
-            text-align:       center;
-            font-weight:      bold;
-            text-align:       center;
-            font-family:      'Cutive Mono';
-        }
+        <p> 18-Apr-2018 <a href="https://arxiv.org/abs/1804.05979">Quantum Blockchain using entanglement in time </a> </p>
+        <p> 10-Apr-2018 <a href="https://arxiv.org/abs/1804.03719">Quantum Algorithm Implementations for Beginners </a> </p>
+        <p> 07-Mar-2018 <a
+          href="https://motherboard.vice.com/en_us/article/pam958/bristlecone-google-quantum-computer-72-qubits">Google
+          Engineers Think This 72-Qubit Processor Can Achieve Quantum Advantage </a> </p>
+        <p> 07-Mar-2018 <a href="https://www.theverge.com/2018/3/7/17091766/blockchain-bitcoin-ethereum-cryptocurrency-meaning">"BLOCKCHAIN" IS MEANINGLESS</a> </p>
+        <p> 27-Feb-2018 <a href="https://news.uchicago.edu/article/2018/02/27/uchicago-scientists-lead-10-million-nsf-expedition-practical-quantum-computing">UChicago scientists to lead $10 million NSF 'expedition' for practical quantum computing </a> </p>
+        <p> 13-Feb-2018 <a href="https://arxiv.org/abs/1802.04451">Blockchain and Artificial Intelligence - Tshilidzi Marwala, Bo Xing</a> </p>
+        <p> 08-Sep-2017 <a href="https://arxiv.org/abs/1709.02779">Machine learning & artificial intelligence in the quantum domain - Vedran Dunjko, Hans J. Briegel</a> </p>
 
-        #top { background: #eaeaea;
-            padding: 5px;
-        }
-
-        a { color: black; background: gold; }
-        a:hover { background: magenta; }
-        h1 { text-decoration: underline; }
-        h1, h2 { 
-            font-weight: bold;
-        }
-
-        h1 { font-size: 2em; }
-        h2 { font-size: 1.2em; }
-        p.bold { background: white; padding: 2px; width: 600px;  text-align:
-            justify; padding: 5px; }
-
-        p.bold b {
-            background: gold;
-        }
-    </style>
-  </head>
-  <body>
-      <div id="top">
-          <h1><a href="https://quantumaiblockchain.com">Quantum AI
-                  Blockchain</a></h1>
-    <h2>News</h2>
-    <p>24-Oct-2018</p>
-    <a
-      href="https://paom.com/products/t-shirt-quantum-ai-blockchain-tee-noonvandersilk/"><img
-      src="/static/media/quantum-ai-blockchain-tee.png" /></a>
-    </p>
-    <p>
-    <a
-      href="https://paom.com/products/t-shirt-quantum-ai-blockchain-tee-noonvandersilk/">Quantum
-      AI Blockchain T-Shirt available! Grab yours here!</a>
-    </p>
-    <p>
-    14-May-2018 <a href="https://www.youtube.com/watch?v=F_Riqjdh2oM">Quantum Computing for Computer Scientists
-    </a>
-    </p>
-    <p>
-    18-Apr-2018 <a href="https://arxiv.org/abs/1804.05979">Quantum Blockchain using entanglement in time
-    </a>
-    </p>
-    <p>
-    10-Apr-2018 <a href="https://arxiv.org/abs/1804.03719">Quantum Algorithm Implementations for Beginners
-    </a>
-    </p>
-    <p>
-    7-Mar-2018 <a href="https://motherboard.vice.com/en_us/article/pam958/bristlecone-google-quantum-computer-72-qubits">Google Engineers Think This 72-Qubit Processor Can Achieve Quantum Supremacy
-    </a>
-    </p>
-    <p>
-    7-Mar-2018 <a href="https://www.theverge.com/2018/3/7/17091766/blockchain-bitcoin-ethereum-cryptocurrency-meaning">‘BLOCKCHAIN’ IS MEANINGLESS
-    </a>
-    </p>
-    <p>
-    27-Feb-2018 <a href="https://news.uchicago.edu/article/2018/02/27/uchicago-scientists-lead-10-million-nsf-expedition-practical-quantum-computing">UChicago scientists to lead $10 million NSF 'expedition' for practical quantum computing
-    </a>
-    </p>
-    <p>
-    13-Feb-2018 <a href="https://arxiv.org/abs/1802.04451">Blockchain and Artificial Intelligence - Tshilidzi Marwala, Bo Xing</a>    
-    </p>
-    <p>
-    8-Sep-2017 <a href="https://arxiv.org/abs/1709.02779">Machine learning & artificial intelligence in the quantum domain - Vedran Dunjko, Hans J. Briegel</a>
-    </p>
-    <h2>Board of Directors</h2>
-    <p> Noon van der Silk, Lyndon Maydwell, Sean Seefried, Fabion Kauker,
-        Susie Sheldrick and Dr Ruth Pearson.
-    </p>
-    <h2>Investors/Contact</h2>
-    <center>
-    <p class="bold">We're only interested in investment from the wholesale
-    quantum investment, bitcoin or AI communities; all of whom can get in
-    contact with us directly by standard means. If you're outside of these
-    communities, we belive you will be able to get the details of one of us.
-    Sorry. Our contact details are not listed directly due to <b>overwhelming
-    interest</b>.
-    </p>
-    </center>
+        <h2>Investors/Contact</h2>
+        <p class="bold">We're only entertaining offers from the wholesale
+        quantum investment, bitcoin or AI communities; all of whom can get in
+        contact with us directly by standard means. If you're outside of these
+        communities, we belive you will be able to get the details of one of us.
+        Sorry. Our contact details are not listed directly due to <b>overwhelming
+        interest</b>.
+        </p>
 
       </div>
-      <canvas height="80" width="80" id="cppn-canvas"></canvas>
-
-      <script>
-        animateCppn("cppn-canvas");
-      </script>
-    <h1>stay tuned ...</h1>
-    <form action="https://formspree.io/quantum-ai-blockchain@googlegroups.com" method="POST" action="/" id="form">
-      <h1> Test Form </h1>
-      <label>
-        <input type="text" name="name" />
-        What is your name?
-      </label>
-      <br/>
-      <label>
-        <input type="text" name="email" />
-        What is your email?
-      </label>
-      <br/>
-      <label>
-        <input type="text" name="tshirt" />
-        What is your tshirt-size?
-      </label>
-      <br/>
-      <label>
-        <input type="text" name="ready" />
-        Is your business quantum-ready?
-      </label>
-      <br/>
-      <label>
-        <input type="text" name="state" />
-        What is your favourite quantum state?
-      </label>
-      <br/>
-      <label>
-        <input type="text" name="invest" />
-        Would you like to invest in quantum-ai-blockchain technologies?
-      </label>
-      <br/>
-      <label>
-        <input type="text" name="qbits" />
-        How many q-bits can you supply to the blockchain??
-      </label>
-      <br/>
-      <label>
-        <input type="text" name="rating" />
-        How would you rate this quantum blockchain experience?
-      </label>
-      <br />
-      <input type="submit" value="Submit Name!" />
-    </form>
-    <div id="root"></div>
-    <script type="text/javascript" charset="utf-8" src="static/js/main.38335c9f.js"> </script>
+      <div class="block">
+        <h2>Board of Directors</h2>
+        <p> Noon van der Silk, Lyndon Maydwell, Sean Seefried, Fabion Kauker,
+            and Dr Ruth Pearson.
+        </p>
+        <h2>Supporters/Followers</h2>
+        <p> Get your own limited-edition quantum AI Blockchain T-Shirt.  </p>
+        <p>
+        <a
+          href="https://paom.com/products/t-shirt-quantum-ai-blockchain-tee-noonvandersilk/"><img
+          src="/static/media/quantum-ai-blockchain-tee.png" /></a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <form action="https://formspree.io/quantum-ai-blockchain@googlegroups.com" method="POST" action="/" id="form">
+    <h1> Test Form </h1>
+    <label>
+      <input type="text" name="name" />
+      What is your name?
+    </label>
+    <br/>
+    <label>
+      <input type="text" name="email" />
+      What is your email?
+    </label>
+    <br/>
+    <label>
+      <input type="text" name="ready" />
+      Is your business quantum-ready?
+    </label>
+    <br/>
+    <label>
+      <input type="text" name="state" />
+      What is your favourite quantum state?
+    </label>
+    <br/>
+    <label>
+      <input type="text" name="tshirt" />
+      How many worlds thoeries do you believe are true in any given world?
+    </label>
+    <br/>
+    <label>
+      <input type="text" name="invest" />
+      Would you like to invest in quantum-ai-blockchain technologies?
+    </label>
+    <br/>
+    <label>
+      <input type="text" name="qbits" />
+      How many q-bits can you supply to the blockchain??
+    </label>
+    <br/>
+    <label>
+      <input type="text" name="rating" />
+      How would you rate this quantum blockchain experience?
+    </label>
+    <br />
+    <input type="submit" value="Submit Name!" />
+  </form>
+  <div id="root"></div>
+  <script type="text/javascript" charset="utf-8" src="static/js/main.38335c9f.js"> </script>
 </body>
 </html>

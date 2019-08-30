@@ -65,7 +65,8 @@ body::before {
 }
 
 h1 a {
-  color:       sandybrown;
+  color: sandybrown;
+  text-decoration: none;
 }
 
 h1 a:hover {
